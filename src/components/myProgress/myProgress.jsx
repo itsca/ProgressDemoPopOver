@@ -22,24 +22,7 @@ class MyProgress extends Component {
   handleMyProgressClicked() {
     console.log('myprogressclicked'); 
   }
-  getTarget() {
-    console.log(ReactDOM.findDOMNode(this.target));
-    
-    return ReactDOM.findDOMNode(this.target);
-  }
-  handleToggle() {
-      console.log('Clicked');
-      
-    this.setState({ show: !this.state.show });
-  }
   render() {
-      console.log(OverlayTrigger);
-      
-    const overlayProps = {
-        container: this,
-        target: this.getTarget,
-        show: true
-    };
     const popoverLeft = (
         <Popover id="popover-positioned-left" title="Popover left">
           <strong>Holy guacamole!</strong> Check this info.
