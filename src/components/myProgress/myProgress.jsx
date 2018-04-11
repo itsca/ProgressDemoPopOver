@@ -13,14 +13,12 @@ import {
 class MyProgress extends Component {
     constructor(props, context) {
         super(props, context);
-        this.getTarget = this.getTarget.bind(this);
-        this.handleToggle = this.handleToggle.bind(this);
         this.state = {
             show: false
         };
     }
   handleMyProgressClicked() {
-    console.log('myprogressclicked'); 
+    console.log('myprogressclicked');
   }
   render() {
     const popoverLeft = (
