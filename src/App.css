@@ -5,7 +5,6 @@
 main {
   display: flex;
   height: 100vh;
-  flex-flow: wrap;
   align-items: center;
   justify-content: center;
   background-color: #222;
