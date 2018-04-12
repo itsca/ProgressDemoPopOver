@@ -23,28 +23,10 @@ class MyProgress extends Component {
             show: true
         };
     }
-  handleMyProgressClicked() {
-    console.log('myprogressclicked');
+  componentDidMount() {
+    window.addEventListener("resize", ()=>{ this.refs.overlay.hide() })
   }
   render() {
-    /*const popoverProgress = (
-        <Popover
-            id="popover-basic"
-            placement="bottom"
-        >
-            50%
-        </Popover>
-      );*/
-      const p = (
-        <ProgressBar now={60} label="60">
-        </ProgressBar>
-      );
-      /*const pp = (
-        <ProgressBar now={1} children={[popoverProgress]} />
-      );*/
-    /*const target = ReactDOM.findDOMNode(p)
-    console.log(target);*/
-    
     const popoverLeft = (
         <Popover title="Your Progress">
           <div className="popOverContainer">
@@ -70,7 +52,7 @@ class MyProgress extends Component {
       );
     return (
       <div>
-        <OverlayTrigger trigger="click" placement="top" overlay={popoverLeft} 
+        <OverlayTrigger ref="overlay" trigger="click" placement="top" rootClose overlay={popoverLeft} 
         onEntered={()=>{
             // Handle progress bar animation
             for (let i = 0; i <= this.state.maxPorgress; i++) {
