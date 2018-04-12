@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <MyProgress />
+        <MyProgress userProgress={56} maxPorgress={125} />
       </main>
     );
   }
